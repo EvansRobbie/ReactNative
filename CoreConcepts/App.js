@@ -7,6 +7,7 @@ import {
   Button,
   Pressable,
   Modal,
+  StyleSheet,
 } from "react-native";
 import Buttons from "./assets/components/Buttons";
 import ModalTest from "./assets/components/ModalTest";
@@ -16,10 +17,21 @@ import Alerts from "./assets/components/Alerts";
 import Greet from "./assets/components/Greet";
 import FlatlistSample from "./assets/components/FlatlistSample";
 import StylingRN from "./assets/components/StylingRN";
+import RNLayout from "./assets/components/RNLayout";
 const logoImg = require("./assets/adaptive-icon.png");
 const App = () => {
   return (
-    <StylingRN />
+    <View style={styles.container}>
+      <RNLayout style={{ backgroundColor: "#8e9b00" }}>Box 1</RNLayout>
+      <RNLayout style={{ backgroundColor: "#b65d1f" }}>Box 2</RNLayout>
+      <RNLayout style={{ backgroundColor: "#1c4c56" }}>Box 3</RNLayout>
+      {/* <RNLayout style={{ backgroundColor: "#ab9156" }}>Box 4</RNLayout>
+      <RNLayout style={{ backgroundColor: "#6b080b" }}>Box 1</RNLayout>
+      <RNLayout style={{ backgroundColor: "#b65d1f" }}>Box 2</RNLayout>
+      <RNLayout style={{ backgroundColor: "#1c4c56" }}>Box 3</RNLayout>
+      <RNLayout style={{ backgroundColor: "#ab9156" }}>Box 4</RNLayout> */}
+    </View>
+    // <StylingRN />
     // // <View style={{ flex: 1, backgroundColor: "red", padding: 60 }}>
     //   {/* <ScrollView>
     //     <Button
@@ -93,5 +105,14 @@ const App = () => {
     // // </View>
   );
 };
+styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "row",
+    marginTop: 60,
+    borderWidth: 5,
+    borderColor: "red",
+  },
+});
 
 export default App;
